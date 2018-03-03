@@ -1,0 +1,40 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.picBox{
+	width: 695px;
+	text-align: center;
+}
+.picTitle{
+	margin-bottom: 15px; 
+	font-size: 12px;
+}
+.introBox{
+	width: 695px;
+	margin: 30px auto;
+}
+.introTitle{
+	width: 695px;
+	background: #EEEEEE;
+	height: 22px;
+	line-height: 22px;
+}
+.introBox p{
+	margin-top: 10px;
+	font-size: 14px;
+}
+.bottomBox{
+	width: 695px;
+	margin:  0 auto;
+	border-top: 1px dashed grey;
+}
+.bottomBox span{
+	font-size: 13px;
+}
+.bottomBox a{
+	color: #4A8CCE;
+}
+.left_nav{
+	height: 150px;
+}

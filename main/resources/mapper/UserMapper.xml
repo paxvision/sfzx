@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.geek.dao.UserDao">
+    <resultMap id="Base_Result" type="com.geek.entity.User">
+        <id column="id" property="id" javaType="Integer" jdbcType="INTEGER"/>
+        <result column="login_name" property="loginName" javaType="String" jdbcType="VARCHAR"/>
+        <result column="user_name" property="userName" javaType="String" jdbcType="VARCHAR"/>
+        <result column="recent_time" property="recentTime" jdbcType="TIMESTAMP" typeHandler="org.apache.ibatis.type.LocalDateTimeTypeHandler"/>
+        <result column="recent_ip" property="recentIp" javaType="String" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" typeHandler="org.apache.ibatis.type.LocalDateTimeTypeHandler"/>
+    </resultMap>
+
+    <sql id="Base_Sql">
+        id,user_name,login_name,create_time,recent_time,recent_ip
+    </sql>
+
+    <select id="findAllUser" resultMap="Base_Result">
+        SELECT
+        <include refid="Base_Sql"/>
+        FROM user
+    </select>
+
+    <select id="findPassword" parameterType="String" resultType="String">
+        SELECT password FROM user WHERE login_name = #{arg0}
+    </select>
+
+    <select id="findUserByLoginName" parameterType="String" resultMap="Base_Result">
+        SELECT <include refid="Base_Sql"/> FROM user WHERE login_name = #{arg0}
+    </select>
+
+    <select id="isExist" resultType="_integer" parameterType="String">
+        SELECT COUNT(id) FROM user WHERE login_name = #{arg0}
+    </select>
+
+    <insert id="insertUser" parameterType="user">
+        INSERT INTO user(user_name,password,login_name,create_time)
+        VALUES (#{userName},#{password},#{loginName},#{createTime})
+    </insert>
+
+    <delete id="deleteUser" parameterType="Integer">
+        DELETE FROM user WHERE id = #{arg0}
+    </delete>
+
+    <delete id="deleteUsers">
+        DELETE FROM user WHERE id IN
+        <foreach collection="array" open="(" separator="," close=")" item="id">
+            #{id}
+        </foreach>
+    </delete>
+
+    <update id="updateUser" parameterType="user">
+        UPDATE user
+        <set>
+            <if test="userName != null">
+                user_name = #{userName},
+            </if>
+            <if test="loginName != null">
+                login_name = #{loginName},
+            </if>
+            <if test="password != null and password != ''">
+                password = #{password},
+            </if>
+            <if test="recentTime != null">
+                recent_time = #{recentTime},
+            </if>
+            <if test="recentIp != null">
+                recent_ip = #{recentIp}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+</mapper>

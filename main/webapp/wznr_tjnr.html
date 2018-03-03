@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>欢迎来到经管实验中心网站</title>
+	<link rel="stylesheet" type="text/css" href="css/AddContent.css">
+	<!--<link rel="stylesheet" href="kindeditor/themes/default/default.css" />-->
+	<link rel="stylesheet" href="css/admin.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script src="js/close.js"></script>
+	<!--<script charset="utf-8" src="kindeditor/kindeditor-min.js"></script>-->
+
+	<script type="text/javascript" src="editor/js/addArticle.js"></script>
+	<script type="text/javascript" src="editor/js/back.js"></script>
+
+	<script src="editor/assets/jquery.min.js"></script>
+	<script src="editor/assets/trumbowyg.js"></script>
+	<script src="editor/assets/plugins/base64/trumbowyg.base64.js"></script>
+	<script type="text/javascript"  src="editor/assets/plugins/upload/trumbowyg.upload.js"></script>
+	<link rel="stylesheet" href="editor/assets/design/css/trumbowyg.css">
+		<!--<script>-->
+			<!--var editor;-->
+			<!--KindEditor.ready(function(K) {-->
+				<!--K('select[name=lang]').change(function() {-->
+					<!--if (editor) {-->
+						<!--editor.remove();-->
+						<!--editor = null;-->
+					<!--}-->
+					<!--editor = K.create('textarea[name="content"]', {-->
+						<!--langType : this.value-->
+					<!--});-->
+				<!--});-->
+				<!--K('select[name=lang]').change();-->
+			<!--});-->
+		<!--</script>-->
+</head>
+<body>
+
+<!--头部/两张图片-->
+<header>
+	<img class="headerImg" src="img/Sys_top.gif">
+	<img class="SysHome" src="img/SysHome_03.png">
+</header>
+
+
+<!--左边侧边栏-->
+<aside>
+	<li class=""><img src="img/title.png"></li>
+	<div class="navBar">
+		<div class="navbarBorder">
+			<ul class="firstUl">
+				<li class="smallTitle">
+					系统管理
+					<span class="glyphicon glyphicon-wrench"></span>
+				</li>
+				<li>
+                    <a href="changecode.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        修改密码
+                    </a>
+                </li>
+                <li>
+                    <a href="column.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        数据库操作
+                    </a>
+                </li>
+			</ul>
+			<ul>
+				<li class="smallTitle">
+					用户管理
+					<span class="glyphicon glyphicon-cog"></span>
+				</li>
+				<li>
+					<a href="hhg-userManage.html">
+						<span class="glyphicon glyphicon-circle-arrow-right"></span>
+						网站管理员
+					</a>
+				</li>
+			</ul>
+			<ul>
+				<li class="smallTitle">
+					网站内容
+					<span class="glyphicon glyphicon-folder-close"></span>
+				</li>
+				<li>
+					<a href="wznr_nrlb.html">
+						<span class="glyphicon glyphicon-circle-arrow-right"></span>
+						内容类别
+					</a>
+				</li>
+				<li>
+					<a href="wznr_nrlb1.html">
+						<span class="glyphicon glyphicon-circle-arrow-right"></span>
+						内容列表
+					</a>
+				</li>
+				<li>
+					<a href="wznr_tjnr.html">
+						<span class="glyphicon glyphicon-circle-arrow-right"></span>
+						添加内容
+					</a>
+				</li>
+			</ul>
+			<ul>
+				<li class="smallTitle">
+					<a href="admin.html">后台主页</a>
+					<span class="glyphicon glyphicon-picture"></span>
+				</li>
+			</ul>
+			<ul>
+				<li onClick="CloseWebPage()" class="smallTitle">
+					退出登录
+					<span class="glyphicon glyphicon-random"></span>
+				</li>
+			</ul>
+		</div>
+		<table class="">
+			<tr>
+				<td class="cloTd" colspan="2">实验中心网站系统</td>
+			</tr>
+			<tr>
+				<td class="leftTd">官方:</td>
+				<td><a href="www.cqupt.edu.cn">www.cqupt.edu.cn</a></td>
+			</tr>
+			<tr>
+				<td class="leftTd">邮件:</td>
+				<td>areohawk@126.com</td>
+			</tr>
+			<tr>
+				<td class="leftTd">地址:</td>
+				<td>中国重庆市</td>
+			</tr>
+			<tr>
+				<td class="cloTd" colspan="2">欢迎您提出意见及建议</td>
+			</tr>
+		</table>
+	</div>
+</aside>
+
+<!--右边主内容-->
+<main>
+	<div class="mainContent">
+		<div class="ContentIntr">
+			<div class="ContentTitle">&nbsp;&nbsp;
+				内容检索及分类查看:添加，修改，删除内容信息
+			</div>
+			<div class="S_blow">
+				<!-- <ul>
+                    <li>添加内容信息</li>
+                    <li>查看所有内容信息</li>
+                </ul> -->
+				<a href="">添加内容信息</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="">查看所有内容信息</a>
+			</div>
+			<!-- 主体 -->
+			<div class="S_addContent">
+				<div class="S_edTitle">
+					<p>文章标题：</p><input type="text" id="title">
+					<p>发布板块：</p>
+					<select id="first">
+						<option>----请选择具体板块----</option>
+						<option disabled="disabled">--中心首页--</option>
+						<option>--中心简介--</option>
+						<option>中心简介</option>
+						<option>中心特色</option>
+						<option>自我评价</option>
+						<option>发展规划</option>
+						<option>辐射作用</option>
+						<option>--实验队伍--</option>
+						<option>中心主任</option>
+						<option>中心人员</option>
+						<option>队伍结构</option>
+						<option>队伍建设</option>
+						<option>教研成果</option>
+						<option>--实验教学--</option>
+						<option>教学定位</option>
+						<option>教学体系</option>
+						<option>教学方法</option>
+						<option>教学效果</option>
+						<option>实验项目</option>
+						<option>典型教材</option>
+						<option>典型课件</option>
+						<option>--管理体系--</option>
+						<option>管理体制</option>
+						<option>运行机制</option>
+						<option>管理制度</option>
+						<option>信息平台</option>
+						<option>--设备环境--</option>
+						<option>仪器设备</option>
+						<option>运行维护</option>
+						<option>环境安全</option>
+						<option>--实验场所--</option>
+						<option>电子商务实验室</option>
+						<option>信息系统实验室</option>
+						<option>业务运营模式实验室</option>
+						<option>外部环境模拟实验室</option>
+						<option>卖场模拟实验室</option>
+						<option>ERP与金融模式实验室</option>
+						<option>--信息系统--</option>
+						<option>教学管理平台</option>
+						<option>教学资源平台</option>
+					</select>
+				</div>
+				<div class="S_editor">
+					<div id="odiv" style="display:none;position:absolute;z-index:100;">
+						<img src="editor/assets/pic/sx.png" title="缩小" border="0" alt="缩小" onclick="sub(-1);"/>
+						<img src="editor/assets/pic/fd.png" title="放大" border="0" alt="放大" onclick="sub(1)"/>
+						<img src="editor/assets/pic/cz.png" title="重置" border="0" alt="重置" onclick="sub(0)"/>
+						<img src="editor/assets/pic/sc.png" title="删除" border="0" alt="删除" onclick="del();odiv.style.display='none';"/>
+					</div>
+					<div onmousedown="show_element(event)" style="clear:both" id="customized-buttonpane" class="editor"></div>
+				</div>
+				<div class="S_footerContent">
+					<button id="submitNow">确认提交</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+
+<script type="text/javascript" src="js/addContent.js"></script>
+</body>
+</html>

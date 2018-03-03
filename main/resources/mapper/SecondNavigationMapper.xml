@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.geek.dao.SecondNavigationDao">
+    <resultMap id="secondNavigationMap" type="secondNavigation">
+        <id column="second_navigation_id" property="secondNavigationId" javaType="Integer" jdbcType="INTEGER"/>
+        <result column="second_navigation_sequence" property="secondNavigationSequence" javaType="Integer" jdbcType="INTEGER"/>
+        <result column="second_navigation_view" property="secondNavigationView" javaType="Integer" jdbcType="INTEGER"/>
+        <result column="second_navigation_name" property="secondNavigationBarName" javaType="String" jdbcType="VARCHAR"/>
+        <result column="second_navigation_date" property="secondNavigationCreateDate" javaType="Date" jdbcType="DATE"/>
+        <result column="article_title" property="articleTitle" javaType="String" jdbcType="VARCHAR"/>
+        <result column="article_content" property="articleContent" javaType="String" jdbcType="VARCHAR"/>
+        <result column="article_create_date" property="articleCreateDate" javaType="Date" jdbcType="DATE"/>
+    </resultMap>
+
+    <delete id="batchDeleteSecondNavigation" parameterType="java.util.List" >
+        DELETE FROM second_navigation
+        WHERE second_navigation_id IN
+        <foreach item="secondNavigationId"  index="index" collection="secondNavigationIds" open="(" separator="," close=")">
+            #{secondNavigationId}
+        </foreach>
+    </delete>
+
+    <delete id="deleteSecondNavigation">
+        DELETE  FROM second_navigation WHERE second_navigation_id=#{secondNavigationId}
+    </delete>
+
+    <insert id="insertSecondNavigation" parameterType="secondNavigation">
+        INSERT INTO second_navigation(second_navigation_name,second_navigation_date)
+        VALUES (#{secondNavigationBarName}, #{secondNavigationCreateDate})
+        WHERE first_navigation_id=#{firstNavigationId}
+    </insert>
+
+    <update id="updateSecondNavigation">
+        UPDATE second_navigation
+        SET
+        <if test="secondNavigationBarName != null and secondNavigationBarName != ''">
+            second_navigation_name=#{secondNavigationBarName}
+        </if>
+        WHERE second_navigation_id=#{secondNavigationId}
+    </update>
+
+    <select id="selectSecondNavigationByName" parameterType="String" resultMap="secondNavigationMap">
+        SELECT * FROM second_navigation
+        WHERE second_navigation_name like concat('%', #{secondNavigationName}, '%')
+    </select>
+
+    <select id="selectAllSecondNavigation" resultMap="secondNavigationMap">
+        SELECT * FROM second_navigation
+        WHERE first_navigation_id IN(SELECT first_navigation_id FROM first_navigation)
+    </select>
+
+    <delete id="deleteAllSecondNavigation">
+        DELETE * FROM second_navigation
+    </delete>
+
+    <select id="selectTotalSecondNavigation" resultType="int">
+        SELECT COUNT(*) FROM second_navigation
+    </select>
+
+    <insert id="insertArticleContent" parameterType="secondNavigation">
+        UPDATE second_navigation
+        SET article_title=#{articleTitle},article_content=#{articleContent},article_create_date=#{articleCreateDate}
+        WHERE second_navigation_name=#{secondNavigationBarName}
+    </insert>
+
+    <select id="selectSecondNavigations" parameterType="String" resultMap="secondNavigationMap">
+        SELECT * FROM second_navigation WHERE first_navigation_id=
+        (SELECT first_navigation_id FROM first_navigation WHERE first_navigation_name=#{firstNavigationName})
+    </select>
+
+    <select id="selectSecondNavigation" parameterType="String" resultMap="secondNavigationMap">
+        SELECT * FROM second_navigation WHERE second_navigation_name=#{secondNavigationName}
+    </select>
+
+    <update id="insertSecondNavigationPicture" parameterType="String" >
+        UPDATE second_navigation SET picture_url=#{pictureUrl}
+    </update>
+</mapper>

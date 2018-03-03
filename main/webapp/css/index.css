@@ -1,0 +1,152 @@
+body,ul,p,div,table,td{
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.divArea {
+    margin: 0 auto;
+    width: 960px;
+    height: 530px;
+    border:2px solid #ffffff;
+    border-radius: 5px 5px;
+    box-shadow:0px 0px 15px gray;
+}
+.downloadFile {
+    z-index: 10;
+}
+.downloadFile ul {
+    position: relative;
+    top: 20px;
+    float: left;
+}
+/* 右边选项卡 */
+.n4Tab .TabTitle ul {
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+.n4Tab .TabTitle li {
+    text-align: center;
+    float:left;
+    width:240px;
+    height:26px;
+    cursor:pointer;
+}
+.n4Tab .TabTitle a {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "宋体";
+    font-weight:bold;
+    color: #ffffff;
+}
+.n4Tab .TabTitle .normal {
+    background-color: #6699cc;
+}
+.n4Tab .TabTitle .active {
+    background-color: #339933;
+}
+.n4Tab .TabContent {
+    padding:25px;
+    position: relative;
+    left: 20px;
+    top:20px;
+    z-index: -20;
+}
+.none {
+    display:none;
+}
+#n4Tab_Content0 p {
+    text-indent:2em;
+
+}
+#n4Tab_Content0 p span {
+    font-size: 11pt;
+    line-height: 150%;
+    font-family: "宋体", arial;
+    COLOR: #2f2f2f;
+}
+#n4Tab_Content1 div  p {
+    font-size: 11pt;
+    line-height: 150%;
+    font-family: "宋体", arial;
+    color: #2f2f2f;
+}
+#n4Tab_Content1 div p {
+    text-indent:2em;
+}
+#n4Tab_Content2 ul{
+    position: relative;
+}
+#n4Tab_Content2 ul p {
+    font-size: 11pt;
+    text-indent:2em;
+    font-family: "宋体", arial;
+    COLOR: #2f2f2f;
+}
+/*支撑材料*/
+.material {
+    float: left;
+    margin-left: 10px;
+    width: 180px;
+    margin-top: 10px;
+}
+.file span{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.glyphicon-download {
+    margin-left: 10px;
+    font-size: 10px;
+}
+.lab {
+    margin-top: 10px;
+    float: left;
+    width: 720px;
+    margin-left: 28px;
+}
+.labDetail span {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/*实验室展示*/
+.roll {
+    width: 700px;
+    height: 168px;
+    margin: 0px auto 0;
+    position: relative;
+}
+.roll .wrap {
+    width: 665px;
+    height: 168px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.roll ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.roll li {
+    float: left;
+    width: 155px;
+    height: 108px;
+    text-align: center;
+}
+.roll li a:hover {
+    position: relative;
+    top: 2px;
+}
+.wrap ul li a img {
+    width: 150px;
+    height: 140px;
+}
+.clear {
+    clear: both;
+    height: 0px;
+}

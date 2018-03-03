@@ -1,0 +1,113 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+/*分页部分*/
+.infoMain{
+	width: 775px;
+	height: 986px;
+}
+/*面包屑导*/
+.infoMain .infoBread{
+	width: 760px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 auto;
+	border-bottom: 1px solid #F0F0F0;
+}
+.infoMain .infoBread p{
+	margin: 0;
+}
+.infoMain .infoBread a{
+	font-size: 14px;
+	text-decoration:none;
+	color: black; 
+}
+.infoMain .infoBread a:hover{
+	color: red; 
+}
+.infoMain .infoBread span{
+	font-size: 12px;
+	margin-left: -5px;
+	margin-top: -5px;
+}
+.infoMain .infoBread .Arrow_02{
+	margin-left: -3px;
+}
+/*主要信息模块*/
+.infoMain .infoMainMiniBlock{
+	overflow: hidden;
+	width: 715px;
+	height: 180px;
+	margin: 5px auto;
+}
+.infoMain .infoMainMiniBlock .intro{
+	margin-top: 10px;
+	float: right;
+	width: 542px;
+	height: 160px;
+}
+.infoMain .infoMainMiniBlock .miniPic{
+	margin-top: 40px; 
+	display: block;
+	float: left;
+	margin-left: 5px;
+	width: 158px;
+	height: 94px;
+
+}
+.infoMain .infoMainMiniBlock .name{
+	width: 490px;
+	height: 54px;
+	background: #EEEEEE;
+	font-size: 12px;
+	padding-left: 10px;
+	line-height: 54px;
+}
+.infoMain .infoMainMiniBlock .name img{
+	margin-right: 10px;
+}
+.infoMain .infoMainMiniBlock .message{
+	font-size: 11pt;
+	width: 500px;
+}
+/*页码*/
+.changePages{
+	overflow: hidden;
+	width: 690px;
+	height: 20px;
+	border-top: 1px dashed #EEEEEE;
+	margin: 5px auto;
+}
+.changePages{
+	text-align:right; 
+}
+.allNumber,.nowPages,.everyPages,.pageChange{
+	margin-right:10px; 
+	font-size: 12px;
+	display: inline-block;
+}
+.pageChange a{
+	color: black;
+	text-decoration: none;
+}
+.pageChange a:hover{
+	color: red;
+}
+.pageNum a{
+	display: inline-block;
+	text-align: center;
+	width: 30px;
+}
+/*总记录数*/
+.totalNumber{
+	color: orange;
+}
+/*页次*/
+.nowPagesNumber{
+	color: orange;
+}
+/*每页条数*/
+.everyPagesNumber{
+	color: orange;
+}

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>管理员登录日志</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/page.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/manager.css">
+    <script src="js/close.js"></script>
+</head>
+<body>
+<!--头部/两张图片-->
+<header>
+    <img src="img/Sys_top.gif">
+    <img class="SysHome" src="img/SysHome_03.png">
+</header>
+
+
+<!--左边侧边栏-->
+<aside>
+    <li class=""><img src="img/title.png"></li>
+    <div class="navBar">
+        <div class="navbarBorder">
+            <ul class="firstUl">
+                <li class="smallTitle">
+                    系统管理
+                    <span class="glyphicon glyphicon-wrench"></span>
+                </li>
+                <li>
+                    <a href="changecode.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        修改密码
+                    </a>
+                </li>
+                <li>
+                    <a href="column.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        数据库操作
+                    </a>
+                </li>
+            </ul>
+            <ul class="firstUl">
+                <li class="smallTitle">
+                    用户管理
+                    <span class="glyphicon glyphicon-cog"></span>
+                </li>
+                <li>
+                    <a href="hhg-userManage.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        网站管理员
+                    </a>
+                </li>
+            </ul>
+            <ul class="firstUl">
+                <li class="smallTitle">
+                    网站内容
+                    <span class="glyphicon glyphicon-folder-close"></span>
+                </li>
+                <li>
+                    <a href="wznr_nrlb.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        内容类别
+                    </a>
+                </li>
+                <li>
+                    <a href="wznr_nrlb1.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        内容列表
+                    </a>
+                </li>
+                <li>
+                    <a href="wznr_tjnr.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        添加内容
+                    </a>
+                </li>
+            </ul>
+            <ul class="firstUl">
+                <li class="smallTitle">
+                    <a href="admin.html">后台主页</a>
+                    <span class="glyphicon glyphicon-picture"></span>
+                </li>
+            </ul>
+            <ul class="firstUl">
+                <li onClick="CloseWebPage()" class="smallTitle">
+                    退出登录
+                    <span class="glyphicon glyphicon-random"></span>
+                </li>
+            </ul>
+        </div>
+        <table class="">
+            <tr>
+                <td class="cloTd" colspan="2">实验中心网站系统</td>
+            </tr>
+            <tr>
+                <td class="leftTd">官方:</td>
+                <td><a href="www.cqupt.edu.cn">www.cqupt.edu.cn</a></td>
+            </tr>
+            <tr>
+                <td class="leftTd">邮件:</td>
+                <td>areohawk@126.com</td>
+            </tr>
+            <tr>
+                <td class="leftTd">地址:</td>
+                <td>中国重庆市</td>
+            </tr>
+            <tr>
+                <td class="cloTd" colspan="2">欢迎您提出意见及建议</td>
+            </tr>
+        </table>
+    </div>
+</aside>
+
+<!--右边主内容-->
+<main>
+    <div class="mainContent">
+        <!--第一部分-->
+        <div class="mainOne">
+
+        <!-- 管理员登录日志 -->
+        <div class="guide">
+            <div class="guide-line">
+                <img src="img/Explain.gif">
+                <strong>数据库操作：系统数据备分，压缩，恢复，管理员登录日志</strong>
+            </div>
+            <div class="guide-main">
+                <ul>
+                    <li><a href="column.html">栏目首页</a></li>
+                    <li>|</li>
+                    <li>网站数据库：<a href="backups.html">备份</a>&nbsp&nbsp
+                    <!-- <a href="compress.html">压缩</a>&nbsp&nbsp -->
+                    <a href="recover.html">恢复</a></li>
+                    <li>|</li>
+                    <li><a href="manager.html">管理员登录日志</a></li>
+                    <li>|</li>
+                    <li>流量数据库：<a href="backups-1.html">备份</a>&nbsp&nbsp
+                    <!-- <a href="compress-1.html">压缩</a>&nbsp&nbsp -->
+                    <a href="recover-1.html">恢复</a></a></li>
+                </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="operate-1">
+            <div class="manager">
+                <table border="1" class="tab-nav">
+                    <tr>
+                        <th>ID</th>
+                        <th>用户名</th>
+                        <th>登录IP</th>
+                        <th>最近登录时间</th>
+                        <th>创建时间</th>
+                        <th>操作&nbsp<button class="selectall">全选</button></th>
+                    </tr>
+                </table>
+                <table border="1" class="table_body">
+                    <!-- <tr id="tr1">
+                        <td>1</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete1">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr2">
+                        <td>2</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete2">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr3">
+                        <td>3</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete3">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr4">
+                        <td>4</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete4">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr5">
+                        <td>5</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete5">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr6">
+                        <td>6</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete6">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr7">
+                        <td>7</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete7">
+                            </form>
+                        </td>
+                    <tr id="tr8">
+                        <td>8</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete8">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr9">
+                        <td>9</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete9">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr10">
+                        <td>10</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                               <input type="checkbox" name="delete" class="delete-one" id="delete10">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr11">
+                        <td>1</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete11">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr12">
+                        <td>2</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete12">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr13">
+                        <td>3</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete13">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr14">
+                        <td>4</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete14">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr15">
+                        <td>5</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete15">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr16">
+                        <td>6</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete16">
+                            </form>
+                        </td>
+                    <tr id="tr17">
+                        <td>7</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete17">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr18">
+                        <td>8</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete18">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr19">
+                        <td>9</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete19">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr20">
+                        <td>10</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete20">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr21">
+                        <td>1</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete21">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr22">
+                        <td>2</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete22">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr23">
+                        <td>3</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete23">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr24">
+                        <td>4</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete24">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr25">
+                        <td>5</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete25">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr id="tr26">
+                        <td>6</td>
+                        <td>岳泉伶</td>
+                        <td>yuequanling</td>
+                        <td>ie</td>
+                        <td>2017-7-28</td>
+                        <td>
+                            <form>
+                                <input type="checkbox" name="delete" class="delete-one" id="delete26">
+                            </form>
+                        </td>
+                    </tr> -->
+                </table>
+                <table border="1" class="delete-tab">
+                    <tr>
+                        <td></td>
+                        <td><button class="delete">删除所选</button></td>
+                    </tr>
+                </table>
+                <table class="page-change">
+                    <tr class="pageline">
+                        <!-- <td colspan="4">共计64条数据&nbsp&nbsp页次：3/4&nbsp&nbsp每页：20条</td> -->
+                        <td colspan="2" class="page_navigation"><div id="page_navigation"></div></td>
+                    </tr> 
+                </table>
+            </div>
+        </div>
+
+        </div>
+    </div>
+<script type="text/javascript">
+    $(document).PaginBar('page_navigation','table_body',10);
+</script>
+   
+</main>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/webContent.css">
+    <script src="js/close.js"></script>
+    <title>内容类别</title>
+</head>
+<body>
+<!--头部/两张图片-->
+<header>
+    <img src="img/Sys_top.gif">
+    <img class="SysHome" src="img/SysHome_03.png">
+</header>
+
+
+<!--左边侧边栏-->
+<aside>
+    <li class=""><img src="img/title.png"></li>
+    <div class="navBar">
+        <div class="navbarBorder">
+            <ul class="firstUl">
+                <li class="smallTitle">
+                    系统管理
+                    <span class="glyphicon glyphicon-wrench"></span>
+                </li>
+                <li>
+                    <a href="changecode.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        修改密码
+                    </a>
+                </li>
+                <li>
+                    <a href="column.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        数据库操作
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li class="smallTitle">
+                    用户管理
+                    <span class="glyphicon glyphicon-cog"></span>
+                </li>
+                <li>
+                    <a href="hhg-userManage.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        网站管理员
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li class="smallTitle">
+                    网站内容
+                    <span class="glyphicon glyphicon-folder-close"></span>
+                </li>
+                <li>
+                    <a href="wznr_nrlb.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        内容类别
+                    </a>
+                </li>
+                <li>
+                    <a href="wznr_nrlb1.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        内容列表
+                    </a>
+                </li>
+                <li>
+                    <a href="wznr_tjnr.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        添加内容
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li class="smallTitle">
+                    <a href="admin.html">后台主页</a>
+                    <span class="glyphicon glyphicon-picture"></span>
+                </li>
+            </ul>
+            <ul>
+                <li onClick="CloseWebPage()" class="smallTitle">
+                    退出登录
+                    <span class="glyphicon glyphicon-random"></span>
+                </li>
+            </ul>
+        </div>
+        <table class="">
+            <tr>
+                <td class="cloTd" colspan="2">实验中心网站系统</td>
+            </tr>
+            <tr>
+                <td class="leftTd">官方:</td>
+                <td><a href="www.cqupt.edu.cn">www.cqupt.edu.cn</a></td>
+            </tr>
+            <tr>
+                <td class="leftTd">邮件:</td>
+                <td>areohawk@126.com</td>
+            </tr>
+            <tr>
+                <td class="leftTd">地址:</td>
+                <td>中国重庆市</td>
+            </tr>
+            <tr>
+                <td class="cloTd" colspan="2">欢迎您提出意见及建议</td>
+            </tr>
+        </table>
+    </div>
+</aside>
+
+<!--右边主内容-->
+<main>
+    <div class="mainContent">
+        <div class="S_container">
+            <div class="S_sort">&nbsp;类别树查看管理：</div>
+            <div class="S_listTitle">
+                <ul>
+                    <li>一级分类</li>
+                    <li>添加内容</li>
+                    <li>管理列表</li>
+                </ul>
+            </div>
+            <div class="S_list">
+                <table cellspacing="0">
+                    <tr>
+                        <td>中心首页</td>
+                        <td><a href="#">添加</a></td>
+                        <td><a href="#" id="manage" class="mana">管理</a></td>
+                    </tr>
+                    <tr>
+                        <td>中心简介</td>
+                        <td><a href="#">添加</a></td>
+                        <td><a href="#" id="manage" class="mana">管理</a></td>
+                    </tr>
+                    <tr>
+                        <td>实验队伍</td>
+                        <td><a href="#">添加</a></td>
+                        <td><a href="#" id="manage" class="mana">管理</a></td>
+                    </tr>
+                    <tr>
+                        <td>实验教学</td>
+                        <td><a href="#">添加</a></td>
+                        <td><a href="#" id="manage" class="mana">管理</a></td>
+                    </tr>
+                    <tr>
+                        <td>管理体系</td>
+                        <td><a href="#">添加</a></td>
+                        <td><a href="#" id="manage" class="mana">管理</a></td>
+                    </tr>
+                    <tr>
+                        <td>设备环境</td>
+                        <td><a href="#">添加</a></td>
+                        <td><a href="#" id="manage" class="mana">管理</a></td>
+                    </tr>
+                    <tr>
+                        <td>实验场所</td>
+                        <td><a href="#">添加</a></td>
+                        <td><a href="#" id="manage" class="mana">管理</a></td>
+                    </tr>
+                    <tr>
+                        <td>信息系统</td>
+                        <td><a href="#">添加</a></td>
+                        <td><a href="#" id="manage" class="mana">管理</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="lookAll">
+                <a href="wznr_nrlb1.html">查看所有内容>></a>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

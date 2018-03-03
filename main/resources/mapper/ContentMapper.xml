@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.geek.dao.ContentDao">
+
+    <resultMap id="content" type="content">
+        <id column="content_id" javaType="Integer" jdbcType="INTEGER" property="contentId"/>
+        <result column="content_title" javaType="String" jdbcType="VARCHAR" property="contentTitle"/>
+        <result column="main_content" javaType="String" jdbcType="VARCHAR" property="mainContent"/>
+        <result column="content_part" javaType="Integer" jdbcType="INTEGER" property="contentPart"/>
+        <result column="content_display" javaType="Integer" jdbcType="INTEGER" property="contentDisplay"/>
+        <result column="content_notice" javaType="Integer" jdbcType="INTEGER" property="contentNotice"/>
+        <result column="content_time" javaType="Date" jdbcType="DATE" property="contentTime"/>
+        <result column="content_view" javaType="Integer" jdbcType="INTEGER" property="contentView"/>
+    </resultMap>
+
+    <insert id="insertContent" parameterType="content">
+        INSERT INTO content(content_title,main_content,content_part,content_display,content_notice,content_time,content_view)
+        VALUES (#{contentTitle},#{mainContent},#{contentPart},#{contentDisplay},#{contentNotice},#{contentTime},#{contentView})
+    </insert>
+
+    <delete id="deleteContent" parameterType="Integer">
+        DELETE FROM content WHERE content_id = #{arg0}
+    </delete>
+
+    <delete id="deleteContents" parameterType="List">
+        DELETE FROM content where content_id IN
+        <foreach collection="contentIds" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <update id="updateContent" parameterType="content">
+        UPDATE content
+        <set>
+            <if test="contentTitle != null and contentTitle != ''">
+                content_title = #{contentTitle},
+            </if>
+            <if test="mainContent != null and mainContent != ''">
+                main_content = #{mainContent},
+            </if>
+            <if test="contentPart != null and contentPart != ''">
+                content_part = #{contentPart},
+            </if>
+            <if test="contentDisplay != null and contentDisplay != ''">
+                content_display = #{contentDisplay},
+            </if>
+            <if test="contentNotice != null and contentNotice != ''">
+                content_notice = #{contentNotice}
+            </if>
+        </set>
+        WHERE content_id = #{contentId}
+    </update>
+
+    <update id="addView" parameterType="Integer">
+        UPDATE content SET content_view = content_view + 1 WHERE content_id = #{arg0}
+    </update>
+
+    <select id="selectAllContents" resultMap="content">
+        SELECT content_id,content_title,main_content,content_part,content_display,content_notice,content_time,content_view
+        FROM content
+    </select>
+
+    <select id="selectContentByPart" resultMap="content" parameterType="Integer">
+        SELECT content_id,content_title,main_content,content_part,content_display,content_notice,content_time,content_view
+        FROM content WHERE content_part = #{arg0}
+    </select>
+
+</mapper>

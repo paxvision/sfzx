@@ -1,0 +1,329 @@
+/*样式说明， rightSide 部分用了自适应高度，但
+leftSide部分没有，所以要自己调整leftSide的高
+度以到达目标效果。若把rightSide设置为分页，那
+就可以用固定高度而不是自适应高度了，所以你们
+要加油这样写哦！！！*/
+
+html,body,p,a,ul,li,ol,span{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+li{
+	list-style: none;
+}
+header{
+	width: 100%;
+	height: 80px;
+	background-color: #fff;
+}
+html{
+	background-color: #898989;
+}
+.container{
+	width: 980px;
+	margin:0 auto;
+}
+.S_logo{
+	width: 300px;
+	height: 80px;
+	margin-left: 10px;
+	float: left;
+}
+.S_logo img{
+	width: 300px;
+	height: 80px;
+}
+.S_EMS{
+	width: 220px;
+	height: 60px;
+	margin-left: 20px;
+	color: #898989;
+	text-align: center;
+	line-height: 95px;
+	font-size: 26px;
+	float: left;
+}
+/*banner*/
+.S_banner{
+	width: 100%;
+	height: 220px;
+}
+.S_banner img{
+	width: 100%;
+	height: 220px;
+}
+/*导航*/
+.S_nav{
+	width: 100%;
+	height: 100px;
+	background-color: red;
+}
+.S_mainNav{
+	width: 100%;
+	height: 50px;
+	background: -webkit-gradient(linear,left top,left bottom,from(#5d88b3),to(#5d88b3),color-stop(50%,#225d98));
+	background: -moz-gradient(linear,left top,left bottom,from(#5d88b3),to(#5d88b3),color-stop(50%,#225d98));
+	background: -o-gradient(linear,left top,left bottom,from(#5d88b3),to(#5d88b3),color-stop(50%,#225d98));
+	background: gradient(linear,left top,left bottom,from(#5d88b3),to(#5d88b3),color-stop(50%,#225d98));
+}
+.S_mainNav a {
+	color: #FFFFFF;
+}
+.S_mainNav ul{
+	width: 100%;
+	height: 50px;
+}
+.S_mainNav ul li{
+	float: left;
+	width: 11%;
+	height: 50px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 50px;
+	text-align: center;
+}
+.S_mainNav ul li:hover{
+	cursor: pointer;
+}
+.select{
+	font-weight: bold;
+}
+.S_secNav{
+	width: 100%;
+	height: 50px;
+	background-color: #fff;
+}
+.S_secNav ul{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+}
+.welColor{
+	color: #0080ff;
+}
+.S_secNav ul li{
+	width: 10%;
+	height: 50px;
+	float: left;
+	color: #0080ff;
+	font-size: 14px;
+	line-height: 50px;
+	text-align: center;
+}
+.S_secNav ul li:hover{
+    color: red;
+}
+/*主体*/
+.SFZX_main{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+.clear{clear:both;} 
+.leftSide{
+	width:25%;
+	height: 627px;
+	float: left;
+	background-color: #f1f1f1;
+}
+.LE_header{
+	width: 100%;
+	height: 28px;
+	float: left;
+	margin-top: 30px;
+/*	background-color: #ff5500;*/
+}
+.LE_header1{
+	width: 100%;
+	height: 28px;
+	float: left;
+	margin-top: 60px;
+/*	background-color: #ff5500;*/
+}
+.LE_line{
+	width: 80%;
+	height: 1px;
+	background-color: #898989;
+	margin-top: 10px;
+	margin-left: 10%;
+	float: left;
+}
+.ico{
+	width: 12px;
+	height: 28px;
+	margin-left: 20px;
+	float: left;
+}
+.ico img{
+	width: 12px;
+	height: 28px;
+}
+.LE_title{
+	width: 100px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+/*	margin-left: 10px;*/
+	float: left;
+}
+.left_nav{
+	width: 100%;
+	height: 100px;
+	float: left;
+}
+.left_nav ul{
+	width: 100%;
+	height: 160px;
+}
+.left_nav ul li{
+	width: 74%;
+	height: 20px;
+	float: left;
+	margin-top: 10px;
+	line-height: 20px;
+	margin-left: 13%;
+	font-size: 14px;
+	text-align: left;
+	color: #000;
+}
+.serch_SFZX{
+	width: 100%;
+	height: 68px;
+	float: left;
+	margin-top: 10px;
+}
+.serch_SFZX span{
+	width: 60px;
+	height: 24px;
+	font-size: 14px;
+	margin-left: 35px;
+	margin-top: 10px;
+/*	float: left;*/
+}
+.serch_SFZX input{
+	width: 100px;
+	height: 16px;
+/*	float: left;*/
+}
+.serch_SFZX select{
+	width: 104px;
+	height: 22px;
+	margin-left: 2px;
+}
+.serch_SFZX  button{
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-color: red;
+	color: #fff;
+	font-size: 8px;
+}
+/*该部分为右边内容展示部分*/
+.rightSide{
+	width: 75%;
+	height: 100%;
+	float: left;
+	background-color: #fff;
+/*	background-color: yellow;*/
+}
+.Right_head{
+	width: 80%;
+	height: 30px;
+	margin-left: 10%;
+	border-bottom: 1px solid #898989;
+}
+.Right_head span{
+	width: 28px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+/*	float: left;*/
+}
+.Right_title{
+	width: 100%;
+	height: 30px;
+	margin-top: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: red;
+	font-size: 14px;
+}
+.updataTime{
+	width: 55%;
+	height: 20px;
+	line-height: 20px;
+/*	margin-top: 10px;*/
+	text-align: right;
+	font-size: 12px;
+	float: left;
+}
+.collectPage{
+	width: 40%;
+	height: 20px;
+	line-height: 20px;
+/*	margin-top: 10px;*/
+	margin-left: 5%;
+	text-align: left;
+	font-size: 12px;
+	float: left;
+}
+.redLine{
+	width: 80%;
+	height: 1px;
+	margin-top: 5px;
+	background-color: red;
+	margin-left: 10%;
+	float: left;
+}
+/*此部分涉及交互，文档以及表单*/
+.blank{
+	width: 100%;
+	height: 500px;
+	margin-top: 30px;
+	background-color: #fff;
+}
+.option{
+	width: 50%;
+	height: 30px;
+	margin-left: 40%;
+	float: left;
+}
+.option ul{
+	width: 100%;
+	height: 30px;
+}
+.option ul li{
+	width: 25%;
+	height: 30px;
+	float: left;
+	font-size: 12px;
+	line-height: 30px;
+	text-align: center;
+}
+/*底部*/
+.SFZX_footer{
+	width: 100%;
+	height: 60px;
+	float: left;
+	margin-top: 0px;
+	background-color: #fff;
+}
+.SFZX_footerLine{
+	width: 86%;
+	height: 3px;
+	margin-left: 7%;
+	background-color: #d0d0d0;
+}
+.SFZX_copyRight{
+	width: 100%;
+	height: 57px;
+	color: #898989;
+	line-height: 67px;
+	text-align: center;
+}

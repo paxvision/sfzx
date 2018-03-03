@@ -1,0 +1,52 @@
+/*用户管理头部*/
+.mainContent .control{
+	height: 48px;
+	border: 1px solid #367BDA;
+}
+.mainContent .control .controlTitle{
+	color: white;
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	background: #6298E1;
+}
+.mainContent .control .controlTitle span{
+	margin-left: 15px; 
+}
+.mainContent .control .controlTitle img{
+	margin-left: 5px;
+	margin-top: -2px; 
+}
+.mainContent .control .controlMain{
+	text-align: center;
+	width: 100%;
+}
+.mainContent .control .controlMain a{
+	text-decoration: none;
+	color: black;
+}
+.mainContent .control .controlMain span{
+	color: #6298E1;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+/*iframe部分*/
+iframe{
+	width: 100%;
+	margin-top: 25px;
+	border: none;
+	height:450px;
+}
+.controlFooter{
+	overflow: hidden;
+	width: 1047px;
+	height: 30px;
+	border-top: 1px solid #6298E1;
+}
+.controlFooter .one,.two,.three{
+	margin-right: 30px;
+	font-size: 13px;
+}
+.controlFooter .time{
+	float: right;
+}

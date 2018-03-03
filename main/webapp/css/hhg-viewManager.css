@@ -1,0 +1,123 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+/*表格部分*/
+.viewAllManager{
+	width: 100%;
+}
+.viewAllManager thead{
+	background: #8DB5E9;
+	color: white;
+}
+.viewAllManager thead th{
+	text-align:center;
+}
+/*删除所选按钮*/
+/*a{
+	text-decoration: none;
+	color: white;
+}*/
+
+a.deleteButton:link{
+	text-decoration: none;
+}
+a.deleteButton:visited{
+	text-decoration: none;
+}
+a.deleteButton:hover{
+	text-decoration: none;
+	color: #367BDA;
+	background: white;
+	border: 1px solid #8DB5E9;
+}
+a.deleteButton:active{
+	text-decoration: none;
+}
+a.deleteButton{
+	border: 1px solid #8DB5E9;
+	text-align: center;
+	line-height: 18px;
+	display: inline-block;
+	width: 70px;
+	height:18px;
+	border-radius: 5px;
+	background: #8DB5E9;
+	color:white;
+	margin-left: 41px;
+	margin-top: 2px;
+}
+/*全选反选按钮*/
+input.selectAll{
+	display: inline-block;
+	margin-left: 10px;
+	color: black;
+	text-decoration: none;
+}
+a.unselect{
+	color: white;
+}
+a.unselect:link{
+	color: white;
+	text-decoration: none;
+}
+a.unselect:visited{
+	color: white;
+	text-decoration: none;
+}
+a.unselect:hover{
+	color: white;
+	text-decoration: none;
+}
+a.unselect:active{
+	color: white;
+	text-decoration: none;
+}
+
+/*分页统计*/
+.total{
+	background: #D7E4F7;
+}
+/*页码*/
+.changePages{
+	overflow: hidden;
+/*	height: 20px;*/
+	border-top: 1px dashed #EEEEEE;
+	margin: 5px auto;
+}
+.changePages{
+	text-align:right; 
+}
+.allNumber,.nowPages,.everyPages,.pageChange{
+	margin-right:10px; 
+	font-size: 12px;
+	display: inline-block;
+}
+.pageChange{
+	float: right;
+	line-height: 20px;
+}
+.pageChange a{
+	color: black;
+	text-decoration: none;
+}
+.pageChange a:hover{
+	color: red;
+}
+.pageNum a{
+	display: inline-block;
+	text-align: center;
+	width: 30px;
+}
+/*总记录数*/
+.totalNumber{
+	color: orange;
+}
+/*页次*/
+.nowPagesNumber{
+	color: orange;
+}
+/*每页条数*/
+.everyPagesNumber{
+	color: orange;
+}

@@ -1,0 +1,165 @@
+html,body,header,img, ul, li, table, tr, td{
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    cursor: pointer;
+}
+html,body {
+}
+/*头部*/
+header {
+    position: fixed;
+    background: url("../img/header_bg.png") repeat-x;
+    width: 100%;
+    height: 63px;
+}
+.headerImg {
+    margin-left: -1050px;
+}
+.SysHome {
+    float: right;
+    margin-top: 20px;
+}
+/*侧边栏*/
+aside {
+    position: fixed;
+    margin-bottom: 0px;
+    width: 180px;
+    background-color: #367BDA;
+    top: 63px;
+    height: 100%;
+}
+.navBar {
+    width: 177px;
+    background-color: #C6D9F4;
+    margin-left: 1px;
+    height: 100%;
+}
+.navbarBorder {
+    position: relative;
+    left: 1px;
+    top: 2px;
+    width: 175px;
+    border-radius: 5px;
+    border:2px solid #0D5ADD;
+}
+.firstUl {
+    margin-top: 12px;
+}
+.navBar li {
+    padding-left: 25px;
+}
+.smallTitle {
+    height: 26px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.navBar table {
+    width: 175px;
+    margin-left: 1px;
+}
+.navBar table td {
+    font-size: 12px;
+    height: 25px;
+    border:solid 2px #367BDA;
+}
+.cloTd {
+    background-color: #367BDA;
+    text-align: center;
+    color: #ffffff;
+}
+.leftTd {
+    width: 44px;
+}
+.smallTitle a {
+    color: #333333;
+}
+/*中间的主体内容*/
+main {
+    position: absolute;
+    left: 180px;
+    top: 63px;
+    width: 85%;
+    /*height: 1121px;*/
+    z-index: -2;
+}
+.mainContent {
+    position: relative;
+    top: 15px;
+    left: 17px;
+    right: 15px;
+}
+/*各个内容部分*/
+.adminmain01 {
+    font-size: 12px;
+    background: url("../img/adminmain01.png") no-repeat;
+    height: 126px;
+    width: 100%;
+}
+.welCome {
+    margin-left: 391px;
+    padding-top: 15px;
+}
+.operate {
+    margin-left: 391px;
+    color: #ffffff;
+    padding-top: 12px;
+}
+.serveInfo {
+    margin-top: 12px;
+    width: 100%;
+    border: 1px solid #6298E1;
+    background-color: #EBF2F9;
+    font-size: 12px;
+    font-family: "宋体", arial;
+}
+.serveInfo td {
+    border: 1px solid #6298E1;
+    height: 24px;
+}
+.serveInfoTd {
+    background-color: #6298E1;
+    font-weight: bold;
+    color: #ffffff;
+}
+.sugg {
+    background-color: #D7E4F7;
+}
+.offSet {
+    padding-left: 5px;
+}
+.footInfo {
+    height: 25px;
+    background-color: #6298E1;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 25px;
+    line-height: 25px;
+}
+.footerInfo {
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    background: url("../img/line.png") repeat-x;
+    width: 100%;
+}
+.footerInfo ul {
+    font-size: 12px;
+    font-family: "宋体", arial;
+    padding-top: 7px;
+}
+.footerInfo ul li {
+    float: left;
+}
+.location {
+    padding-left: 100px;
+}
+.nowTime {
+    padding-left: 500px;
+}
+
+

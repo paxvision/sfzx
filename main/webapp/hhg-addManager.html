@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/hhg-addManager.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/hhg-addManager.js"></script>
+<head>
+	<title>添加管理员</title>
+</head>
+<body>
+	<div class="addmanagerMain">
+		<form id="addManager" enctype="multipart/form-data" class="form-horizontal">
+			<div class="form-group loginName ">
+				<label class="col-sm-2 control-label">
+				登录名
+				</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control loginName"  name="loginName" placeholder="请输入您的登录名">
+				</div>
+				<div class="col-sm-5">
+					<span>* 3-10位字符，不可修改</span>
+				</div>
+			</div>
+			<div class="form-group password">
+				<label class="col-sm-2 control-label">
+				密码
+				</label>
+				<div class="col-sm-5">
+					<input type="password" class="form-control password"  name="password" placeholder="请输入您的密码">
+				</div>
+				<div class="col-sm-5">
+					<span>* 6-16位字符</span>
+				</div>
+			</div>
+			<div class="form-group password">
+				<label class="col-sm-2 control-label">
+				确认密码
+				</label>
+				<div class="col-sm-5">
+					<input type="password" class="form-control confirmPassword" placeholder="请确认您的密码">
+				</div>
+				<div class="col-sm-5">
+					<span>*</span>
+				</div>
+			</div>
+			<div class="form-group userName">
+				<label class="col-sm-2 control-label">
+				管理员名
+				</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control userName" name="userName" placeholder="请输入管理员名">
+				</div>
+				<div class="col-sm-5">
+					<span></span>
+				</div>
+			</div>
+			<!-- <div class="form-group tips">
+				<label class="col-sm-2 control-label">
+				备注说明
+				</label>
+				<div class="col-sm-5">
+					<textarea type="text" rows="5" cols="30" style="resize: none;" class="form-control" name="tips" placeholder="您的备注"></textarea>
+				</div>
+				<div class="col-sm-5">
+					<span></span>
+				</div>
+			</div> -->
+			</form>
+			<div class="form-group">
+				<label class="col-sm-4 control-label">
+				</label>
+				<button class="col-sm-1 btn btn-info" id="sub">提交</button>
+				<label class="col-sm-7 control-label">
+				</label>
+			</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>经济管理实验中心</title>
+    <!-- <link href="css/sfzx_intr.css" type="text/css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="css/video.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<div class="container">
+    <!-- 头部 -->
+    <header>
+        <div class="S_logo">
+            <img src="img/logo.jpg">
+        </div>
+        <div class="S_EMS">
+            视频录像
+        </div>
+    </header>
+    <!-- 大广告 -->
+    <div class="S_banner">
+        <img src="img/menu.jpg">
+    </div>
+    <!-- 标题 -->
+    <div class="S_nav">
+        <div class="S_mainNav">
+            <ul id="mainNav">
+                <li><a href="index.html">中心首页</a></li>
+                <li><a href="zxjj.html">中心简介</a></li>
+                <li><a href="sydw.html">实验队伍</a></li>
+                <li><a href="syjx.html">实验教学</a></li>
+                <li class="select"><a href="sply.html">视频录像</a></li>
+                <li ><a href="gltx.html">管理体系</a></li>
+                <li><a href="sbhj.html">设备环境</a></li>
+                <li><a href="sycs.html">实验场所</a></li>
+                <li><a href="xxxt.html">信息系统</a></li>
+            </ul>
+        </div>
+        <div class="S_secNav">
+            <div class="part1" style="display:block">
+                <ul id="secNav">
+                    <li><a href="sply.html">中心简介</a></li>
+                    <li><a href="sply-wkl.html">王开良</a></li>
+                    <li><a href="sply-hsj.html">黄蜀江</a></li>
+                    <li><a href="sply-lyj.html">刘友军</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!-- 主体 -->
+    <div class="SFZX_main">
+        <!-- 左边导航 -->
+        <div class="leftSide">
+            <div class="LE_header">
+                <div class="ico">
+                <img src="img/ico.jpg">
+                </div>
+                <div class="LE_title">
+                视频录像
+                </div>
+            </div>
+            <div class="LE_line"></div>
+            <div class="left_nav">
+                <ul id="leftNav">
+                    <li><img src="img/Arrow_01.jpg"><a href="sply.html">中心简介</a></li>
+                    <li><img src="img/Arrow_01.jpg"><a href="sply-wkl.html">王开良</a></li>
+                    <li><img src="img/Arrow_01.jpg"><a href="sply-hsj.html">黄蜀江</a></li>
+                    <li><img src="img/Arrow_01.jpg"><a href="sply-lyj.html">刘友军</a></li>
+                 </ul>
+            </div>
+            <div class="LE_header1">
+                <div class="ico">
+                    <img src="img/ico.jpg">
+                </div>
+                <div class="LE_title">
+                    信息搜索
+                </div>
+            </div>
+            <div class="LE_line"></div>
+            <div class="serch_SFZX">
+                <span>关键字：</span><input type="text" name="keyword">
+                <span>范&nbsp;&nbsp;&nbsp;围：</span><select>
+                <option>-请选择-</option>
+                <option>文章主体信息</option>
+                <option>实验室及软件</option>
+            </select>
+                <button type="button" id="go">Go</button>
+            </div>
+        </div>
+        <!-- 右边主要内容 -->
+        <div class="rightSide">
+            <div class="Right_head">
+
+            </div>
+            <div class="Right_title">刘友军视频</div>
+			<div class="collectPage"><a href="video/liuyoujun.mp4" download="video/liuyoujun.mp4">下载此视频</a></div>
+            <div class="redLine"></div>
+            <!-- <div class="collectPage"><a style="cursor:pointer" onclick="AddFavorite(window.location,document.title)">收藏此页</a></div> -->
+            <!-- <div class="redLine"></div> -->
+            <!-- 此部分涉及交互，文档以及表单 -->
+            <div class="blank">
+            	<video src="video/liuyoujun.mp4" poster="img/alone4.jpg" autoplay="autoplay" preload="none" controls="controls"></video>
+            </div>
+            <div class="redLine"></div>
+            <div class="option">
+                <ul>
+                    <li><a style="cursor:pointer" onClick='history.go(0)'>【刷新页面】</a></li>
+                    <li><a style="cursor:pointer" onclick="AddFavorite(window.location,document.title)">【加入收藏】</a></li>
+                    <li><a href="javascript:window.print();">【打印此页】</a></li>
+                    <li><a style="cursor:pointer" onClick="CloseWebPage()">【关闭窗口】</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="SFZX_footer">
+            <div class="SFZX_footerLine"></div>
+            <div class="SFZX_copyRight">
+                重庆邮电大学经济管理学院&nbsp;&nbsp; © &nbsp;2009-2017 &nbsp;&nbsp;&nbsp; 版权所有
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<script src="js/addFavo.js"></script>
+<script src="js/close.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/hhg-viewManager.css">
+<link rel="stylesheet" type="text/css" href="css/hhg-addManager.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/hhg-viewManager.js"></script>
+<script type="text/javascript" src="js/hhg-changeManager.js"></script>
+<head>
+	<title>查看所有管理员</title>
+</head>
+<body>
+	<table class="viewAllManager"   border="1" bordercolor="#6298E1" style="border-collapse:collapse;">
+		<thead>
+			<th>ID</th>
+			<th>登录名</th>
+			<th>用户名</th>
+			<th>最近登陆时间</th>
+			<th>最近登陆IP</th>
+			<th>创建时间</th>
+			<th colspan="2" style="width: 15%;">操作<input type="checkbox" class="selectAll" style="margin-left: 10px;">全选<a href="javascript:;" class="unselect" style="margin-left: 10px;">反选</a></th>
+		</thead>
+		<tbody class="tbody">
+		</tbody>
+		<tr class="delete">
+			<td colspan="6"></td>
+			<td colspan="2"><a class="deleteButton" href="javascript:;">删除所选</a></td>
+		</tr>
+		<tr class="total">
+			<td colspan="8" class="changePagesText">
+				<div class="allNumber">
+					<span>共计：</span><span class="totalNumber"></span><span>条记录</span>
+				</div>
+				<div class="nowPages">
+					<span>页次：</span><span class="nowPagesNumber"></span><span class="totalPages"></span>
+				</div>
+				<div class="everyPages">
+					<span>每页：</span><span class="everyPagesNumber"></span><span>条</span>
+				</div>
+				<div class="pageChange">
+					<span><a class="pageFirst" href="javascript:;">首页</a></span>
+					<span><a class="pagePre" href="javascript:;">上一页</a></span>
+					<span class="pageNum"></span>
+					<span><a class="pageNext" href="javascript:;">下一页</a></span>
+					<span><a class="pageLast" href="javascript:;">尾页</a></span>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<!-- 修改管理员 -->
+	<div class="changemanagerMain addmanagerMain" style="display: none;">
+		<form id="changeManager" enctype="multipart/form-data" class="form-horizontal">
+			<div class="form-group loginName ">
+				<label class="col-sm-2 control-label">
+				id
+				</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control id"  readonly="readonly" name="id" placeholder="请输入您的登录名">
+				</div>
+				<div class="col-sm-5">
+					<span></span>
+				</div>
+			</div>
+			<div class="form-group loginName ">
+				<label class="col-sm-2 control-label">
+				登录名
+				</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control loginName" name="loginName"  readonly="readonly" placeholder="请输入您的登录名">
+				</div>
+				<div class="col-sm-5">
+					<span></span>
+				</div>
+			</div>
+			<div class="form-group password">
+				<label class="col-sm-2 control-label">
+				新的密码
+				</label>
+				<div class="col-sm-5">
+					<input type="password" class="form-control" name="password" placeholder="请输入新的密码">
+				</div>
+				<div class="col-sm-5">
+					<span>* 6-16位字符，不填默认不更改</span>
+				</div>
+			</div>
+			<div class="form-group password">
+				<label class="col-sm-2 control-label">
+				确认密码
+				</label>
+				<div class="col-sm-5">
+					<input type="password" class="form-control confirmPassword" placeholder="请确认您的密码">
+				</div>
+				<div class="col-sm-5">
+					<span>*</span>
+				</div>
+			</div>
+			<div class="form-group userName">
+				<label class="col-sm-2 control-label">
+				管理员名
+				</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control userName" name="userName" placeholder="请输入管理员名">
+				</div>
+				<div class="col-sm-5">
+					<span></span>
+				</div>
+			</div>
+			<!-- <div class="form-group tips">
+				<label class="col-sm-2 control-label">
+				备注说明
+				</label>
+				<div class="col-sm-5">
+					<textarea type="text" rows="5" cols="30" style="resize: none;" class="form-control" name="tips" placeholder="您的备注"></textarea>
+				</div>
+				<div class="col-sm-5">
+					<span></span>
+				</div>
+			</div> -->
+			</form>
+			<div class="form-group">
+				<label class="col-sm-4 control-label">
+				</label>
+				<button class="col-sm-1 btn btn-info" id="changeClick">修改</button>
+				<label class="col-sm-7 control-label">
+				</label>
+			</div>
+	</div>
+</body>
+</html>

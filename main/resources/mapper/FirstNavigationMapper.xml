@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.geek.dao.FirstNavigationDao">
+
+    <resultMap id="firstNavigation" type="firstNavigation">
+        <id column="first_navigation_id" property="firstNavigationId" javaType="Integer" jdbcType="INTEGER"/>
+        <result column="first_navigation_sequence" property="firstNavigationSequence" javaType="Integer" jdbcType="INTEGER"/>
+        <result column="first_navigation_view" property="firstNavigationView" javaType="Integer" jdbcType="INTEGER"/>
+        <result column="first_navigation_name" property="firstNavigationBarName" javaType="String" jdbcType="VARCHAR"/>
+        <result column="first_navigation_date" property="firstNavigationCreateDate" javaType="Date" jdbcType="DATE"/>
+
+        <collection property="secondNavigationList" ofType="secondNavigation">
+            <id column="second_navigation_id" property="secondNavigationId" javaType="Integer" jdbcType="INTEGER"/>
+            <result column="second_navigation_sequence" property="secondNavigationSequence" javaType="Integer" jdbcType="INTEGER"/>
+            <result column="second_navigation_view" property="secondNavigationView" javaType="Integer" jdbcType="INTEGER"/>
+            <result column="second_navigation_name" property="secondNavigationBarName" javaType="String" jdbcType="VARCHAR"/>
+            <result column="second_navigation_date" property="secondNavigationCreateDate" javaType="Date" jdbcType="DATE"/>
+            <result column="article_title" property="articleTitle" javaType="String" jdbcType="VARCHAR"/>
+            <result column="article_content" property="articleContent" javaType="String" jdbcType="VARCHAR"/>
+            <result column="article_create_date" property="articleCreateDate" javaType="Date" jdbcType="DATE"/>
+            <result column="picture_url" property="pictureUrl" javaType="String" jdbcType="VARCHAR"/>
+        </collection>
+
+    </resultMap>
+
+    <select id="selectAllFirstNavigationName" resultMap="firstNavigation">
+        SELECT first_navigation_name
+        FROM first_navigation
+        ORDER BY first_navigation_sequence
+        ASC
+    </select>
+
+    <select id="selectAllSecondNavigationById" resultMap="firstNavigation">
+        SELECT *
+        FROM first_navigation, second_navigation
+        WHERE first_navigation.first_navigation_id = second_navigation.first_navigation_id
+        ORDER BY second_navigation_sequence
+        ASC
+    </select>
+
+    <insert id="insertFirstNavigation" parameterType="firstNavigation">
+        INSERT INTO first_navigation(first_navigation_name,first_navigation_sequence,first_navigation_date)
+        VALUES(#{firstNavigationBarName},#{firstNavigationSequence},#{firstNavigationCreateDate})
+    </insert>
+
+    <delete id="deleteFirstNavigation" parameterType="Integer">
+        DELETE * from first_navigation WHERE first_navigation_id=#{firstNavigationId}
+    </delete>
+
+    <update id="addfirstNavigationView" parameterType="Integer">
+         UPDATE first_navigation SET first_navigation_view = first_navigation_view + 1 WHERE first_navigation_id = #{firstNavigationId}
+    </update>
+
+    <update id="updateFirstNavigation" parameterType="firstNavigation">
+        UPDATE first_navigation
+        SET
+        <if test="firstNavigationBarName != null and firstNavigationBarName !=''">
+            first_navigation_name=#{firstNavigationBarName}
+        </if>
+        WHERE first_navigation_id=#{updateFirstNavigation}
+    </update>
+
+    <select id="selectFirstNavigationAndSecondNavigation" resultMap="firstNavigation" parameterType="String">
+        SELECT * FROM second_navigation,first_navigation
+        WHERE second_navigation.first_navigation_id=first_navigation.first_navigation_id AND second_navigation_name=#{secondNavigationName}
+    </select>
+</mapper>

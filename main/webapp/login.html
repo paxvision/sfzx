@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>用户登录</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/loginSupersized.css">
+        <link rel="stylesheet" href="css/loginStyle.css">
+        <script src="js/loading.js"></script>
+        <script src="js/confirm.js"></script>
+
+    </head>
+
+    <body>
+
+        <div class="page-container">
+            <h1>实验中心网站系统</h1>
+            <form action="" method="post">
+                <input type="text" name="username" id="username" class="username" placeholder="请输入用户名">
+                <input type="password" name="password" id="password" class="password" placeholder="请输入密码">
+
+                <div id="v_container"></div><!--验证码图片-->
+                <input type="text" id="code_input" name="confirm" placeholder="请输入验证码">
+                <button  id="my_button" type="submit">用户登录</button>
+                <div class="error"><span>+</span></div>
+            </form>
+        </div>
+
+        <script src="js/jquery-1.8.2.min.js"></script>
+        <script src="js/fnOne.js"></script>
+        <script src="js/fnTwo.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/loginJudge.js"></script>
+
+    </body>
+
+</html>
+

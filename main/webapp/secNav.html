@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎使用经济管理实验中心网站后台管理系统</title>
+    <link rel="stylesheet" type="text/css" href="css/manageContent.css">
+    <script type="text/javascript" language="javascript" src="js/jquery.js" ></script>
+</head>
+<body>
+<div class="ContentIntr">
+    <div class="ContentTitle">&nbsp;&nbsp;内容检索及分类查看:添加，修改，删除内容信息</div>
+    <div class="S_blow">
+        <div class="S_search">
+            关键字：<input type="text" placeholder="请输入关键字" name="keyWord">
+            <button id="search">检索</button>
+        </div>
+        <div class="S_look">
+            查看： <a href="">全部内容</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">其他内别内容</a>
+        </div>
+    </div>
+    <div class="S_blank">
+        &nbsp;&nbsp;内容：列表-> 全部
+    </div>
+    <div class="S_table">
+        <table border="1" cellspacing="0" bordercolor="#6298e1" id="connection">
+
+        </table>
+    </div>
+    <div class="S_delete">
+        <input type="checkbox" id="cboxchecked">全选<button id="btn_submit">删除所选</button>
+    </div>
+    <div class="S_delete">
+        <div class="pageIcome"><!-- &nbsp;&nbsp;共计：<span>331</span>条记录&nbsp;&nbsp;页次：<span>1/2</span>页&nbsp;&nbsp;每页<span>20</span>条 --></div>
+
+        <div class="pageTurn"><span><a href=""><!-- 首页</a></span>&nbsp;&nbsp;<span><a href="">上一页</a></span>&nbsp;&nbsp;<span>1</span>&nbsp;&nbsp;<span><a href="" id="next">下一页</a></span>&nbsp;&nbsp;<span><a href="">尾页</a></span>&nbsp;&nbsp;<input type="text"><button>跳转</button>&nbsp;&nbsp; --></div>
+    </div>
+</div>
+<script type="text/javascript" src="js/webContent.js"></script>
+</body>
+</html>

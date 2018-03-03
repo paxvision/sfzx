@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/changecode.css">
+    <script src="js/close.js"></script>
+    <title>修改密码</title>
+</head>
+<body>
+<!--头部/两张图片-->
+<header>
+    <img src="img/Sys_top.gif">
+    <img class="SysHome" src="img/SysHome_03.png">
+</header>
+
+
+<!--左边侧边栏-->
+<aside>
+    <li class=""><img src="img/title.png"></li>
+    <div class="navBar">
+        <div class="navbarBorder">
+            <ul class="firstUl">
+                <li class="smallTitle">
+                    系统管理
+                    <span class="glyphicon glyphicon-wrench"></span>
+                </li>
+                <li>
+                    <a href="changecode.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        修改密码
+                    </a>
+                </li>
+                <li>
+                    <a href="column.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        数据库操作
+                    </a>
+                </li>
+            </ul>
+            <ul class="firstUl">
+                <li class="smallTitle">
+                    用户管理
+                    <span class="glyphicon glyphicon-cog"></span>
+                </li>
+                <li>
+                    <a href="hhg-userManage.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        网站管理员
+                    </a>
+                </li>
+            </ul>
+            <ul class="firstUl">
+                <li class="smallTitle">
+                    网站内容
+                    <span class="glyphicon glyphicon-folder-close"></span>
+                </li>
+                <li>
+                    <a href="wznr_nrlb.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        内容类别
+                    </a>
+                </li>
+                <li>
+                    <a href="wznr_nrlb1.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        内容列表
+                    </a>
+                </li>
+                <li>
+                    <a href="wznr_tjnr.html">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                        添加内容
+                    </a>
+                </li>
+            </ul>
+            <ul class="firstUl">
+                <li class="smallTitle">
+                    <a href="admin.html">后台主页</a>
+                    <span class="glyphicon glyphicon-picture"></span>
+                </li>
+            </ul>
+            <ul class="firstUl">
+                <li onClick="CloseWebPage()" class="smallTitle">
+                    退出登录
+                    <span class="glyphicon glyphicon-random"></span>
+                </li>
+            </ul>
+        </div>
+        <table class="">
+            <tr>
+                <td class="cloTd" colspan="2">实验中心网站系统</td>
+            </tr>
+            <tr>
+                <td class="leftTd">官方:</td>
+                <td><a href="www.cqupt.edu.cn">www.cqupt.edu.cn</a></td>
+            </tr>
+            <tr>
+                <td class="leftTd">邮件:</td>
+                <td>areohawk@126.com</td>
+            </tr>
+            <tr>
+                <td class="leftTd">地址:</td>
+                <td>中国重庆市</td>
+            </tr>
+            <tr>
+                <td class="cloTd" colspan="2">欢迎您提出意见及建议</td>
+            </tr>
+        </table>
+    </div>
+</aside>
+
+<!--右边主内容-->
+<main>
+    <div class="mainContent">
+        <!--第一部分-->
+        <div class="mainOne">
+
+        <!-- 修改密码 -->
+            <div class="guide">
+                <div class="guide-line">
+                    <img src="img/Explain.gif">
+                    <strong>系统管理：添加，修改站点的相关信息</strong>
+                </div>
+                <div class="guide-main">
+                    <ul>
+                        <li><a href="changecode.html">修改密码</a></li>
+                        <li>|</li>
+                        <li><a href="column.html">数据库操作</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="operate-1">
+                <div class="form">
+                    <form action method="post">
+                        <span>用户名:</span>
+                        <input type="text" name="username" class="_form" placeholder="请输入用户名">
+                        <span>新密码:</span>
+                        <input type="password" name="old-password" class="_form" placeholder="请输入新密码">
+                        <span>确认密码:</span>
+                        <input type="password" name="new-password" class="_form" placeholder="请确认新密码">
+                        <input type="submit" name="submit" value="保存" class="submit" required>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
